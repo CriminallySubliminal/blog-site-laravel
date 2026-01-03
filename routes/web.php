@@ -8,8 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [PostController::class, 'index']
+Route::get('/', [PostController::class, 'index']
 )->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
